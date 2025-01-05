@@ -1,3 +1,25 @@
+```bash
+mvn clean install
+
+java -jar BasicPipeline/target/BasicPipeline-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar BufferProbe/target/BufferProbe-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar Controllers/target/Controllers-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar HLS/target/HLS-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java --module-path ./javafx-sdk-23.0.1/lib --add-modules javafx.controls -jar FXCamera/target/FXCamera-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java --module-path ./javafx-sdk-23.0.1/lib --add-modules javafx.controls -jar FXPlayer/target/FXPlayer-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar SwingCamera/target/SwingCamera-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar SwingPlayer/target/SwingPlayer-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+
+java -jar WebRTCSendRecv/target/WebRTCSendRecv-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
 GStreamer Java examples
 =======================
 

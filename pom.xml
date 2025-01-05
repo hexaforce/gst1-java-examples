@@ -1,0 +1,76 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.freedesktop.gstreamer</groupId>
+  <artifactId>examples</artifactId>
+  <version>1.4.0</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <java.version>23</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <modules>
+    <module>Utils</module>
+    <module>BasicPipeline</module>
+    <module>BufferProbe</module>
+    <module>Controllers</module>
+    <module>FXCamera</module>
+    <module>FXPlayer</module>
+    <module>HLS</module>
+    <module>SwingCamera</module>
+    <module>SwingPlayer</module>
+    <module>WebRTCSendRecv</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.freedesktop.gstreamer</groupId>
+      <artifactId>gst1-java-core</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>${basedir}</sourceDirectory>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.7.1</version>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+              <manifest>
+                <mainClass></mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+          <executions>
+            <execution>
+              <id>make-assembly</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

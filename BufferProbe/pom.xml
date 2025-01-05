@@ -1,0 +1,42 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.freedesktop.gstreamer</groupId>
+    <artifactId>examples</artifactId>
+    <version>1.4.0</version>
+  </parent>
+
+  <groupId>org.freedesktop.gstreamer.examples</groupId>
+  <artifactId>BufferProbe</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <properties>
+    <java.version>23</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.freedesktop.gstreamer.examples</groupId>
+      <artifactId>Utils</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>${basedir}</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>BufferProbe</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
